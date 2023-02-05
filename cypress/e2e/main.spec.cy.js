@@ -43,6 +43,7 @@ describe('Few tests for Telnyx mainpage', () => {
     cy.get(mainPage.getEmail()).type('test123@gmail.com') 
       .type('{enter}')
       .should('have.value', 'test123@gmail.com')
+    cy.get(signupPage.getEmail()).should('have.value', 'test123@gmail.com')
     cy.url().should('include', '/sign-up')     
   })
 
